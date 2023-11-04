@@ -4,11 +4,13 @@ import { useFormik } from 'formik'
 
 import { initialValues, validatioSchema } from "./LoginForm.form"
 import { Auth } from '../../../../api'
+import { useAuth } from '../../../../hooks'
 import "./LoginForm.scss"
 
 const authController = new Auth();
 
 export function LoginForm() {
+    const { login } = useAuth()
     const [error, setError] = useState("")
 
     const formik = useFormik({
@@ -19,7 +21,9 @@ export function LoginForm() {
             try {
                 setError("")
                 const response = await authController.login(formValue)
-                console.log(response);
+                authController.setAccessToken(response.access)
+                authController.setRefreshToken(response.refresh)
+                login(response.access)
             } catch (error) {
                 setError(error)
                 console.error(error);
