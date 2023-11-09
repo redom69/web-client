@@ -12,7 +12,6 @@ export function Menu() {
     const onOpenCloseModal = () => setShowModal((prevState) => !prevState);
     const onReload = () => setReload((prevState) => !prevState);
 
-
     const panes = [
         {
             menuItem: "Menus activos",
@@ -31,7 +30,6 @@ export function Menu() {
             )
         }
     ];
-
 
     return (
         <>
