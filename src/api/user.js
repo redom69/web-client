@@ -1,6 +1,4 @@
-import { object } from "yup";
 import { ENV } from "../utils";
-
 
 export class User {
     baseApi = ENV.BASE_API

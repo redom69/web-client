@@ -88,9 +88,8 @@ export function UserItem(props) {
             <BasicModal show={showModal} close={onOpenCloseModal} title={titleModal}>
                 <UserForm close={onOpenCloseModal} onReload={onReload} user={user} />
             </BasicModal>
-            <Confirm open={showConfirm} onCancel={onOpenCloseConfirm} onConfirm={isDelete ? onDelete : onActivateDesactivate} content={confirmMessage} size='mini'>
+            <Confirm open={showConfirm} onCancel={onOpenCloseConfirm} onConfirm={isDelete ? onDelete : onActivateDesactivate} content={confirmMessage} size='mini' />
 
-            </Confirm>
         </>
 
     )

@@ -48,7 +48,7 @@ export function AuthProvider(props) {
             setToken(accessToken);
             setUser(response);
         } catch (error) {
-            console.log(error);
+            throw error;
         }
 
     };
