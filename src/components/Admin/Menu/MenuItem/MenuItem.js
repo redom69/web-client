@@ -31,13 +31,13 @@ export function MenuItem(props) {
 
     const openDeleteConfirm = () => {
         setIsDelete(true)
-        setConfirmMessage(`Eliminar usuario ${menu.title}`);
+        setConfirmMessage(`Eliminar menu: ${menu.title}`);
         onOpenCloseConfirm();
     }
 
     const openDesactivateActivateConfirm = () => {
         setIsDelete(false);
-        setConfirmMessage(menu.active ? `Desactivar menu ${menu.title}` : `Activar usuario ${menu.title}`);
+        setConfirmMessage(menu.active ? `Desactivar menu ${menu.title}` : `Activar menu ${menu.title}`);
         onOpenCloseConfirm();
     }
 
