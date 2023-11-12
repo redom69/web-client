@@ -1,9 +1,14 @@
-import React from "react"
+import React from "react";
+
+import { Banner, HomeCourses, HowMyCoursesWork, Reviews } from "../../../components/Web";
 
 export function Home() {
     return (
         <div>
-            <h1>En la Home</h1>
+            <Banner />
+            <HomeCourses />
+            <HowMyCoursesWork />
+            <Reviews />
         </div>
     )
 }

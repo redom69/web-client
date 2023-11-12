@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom"
 
-import { Home, Courses, Blog, Contact, Post } from '../pages/web'
+import { Home, Courses, Blog, Post } from '../pages/web'
 import { ClientLayout } from '../layouts'
 
 export function WebRouter() {
@@ -19,8 +19,7 @@ export function WebRouter() {
             <Route path='/' element={loadLayout(ClientLayout, Home)} />
             <Route path='/courses' element={loadLayout(ClientLayout, Courses)} />
             <Route path='/blog' element={loadLayout(ClientLayout, Blog)} />
-            <Route path='/contact' element={loadLayout(ClientLayout, Contact)} />
-            <Route path='/post' element={loadLayout(ClientLayout, Post)} />
+            <Route path='/blog/:path' element={loadLayout(ClientLayout, Post)} />
         </Routes>
     )
 }
